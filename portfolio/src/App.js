@@ -1,5 +1,6 @@
 import './App.css';
-import Home from "./pages/home"
+import Home from "./pages/home/index"
+import Data from "./pages/data/index"
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path='/data' element={<Data />}></Route>
         </Routes>
       </Router>
     </div>
