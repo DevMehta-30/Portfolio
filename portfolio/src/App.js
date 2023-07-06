@@ -1,5 +1,5 @@
 import './App.css';
-import Landing from "./components/landing"
+import Home from "./pages/home"
 import {
   BrowserRouter as Router,
   Route,
@@ -10,7 +10,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/' element={<Landing />}></Route>
+          <Route path='/' element={<Home />}></Route>
         </Routes>
       </Router>
     </div>
