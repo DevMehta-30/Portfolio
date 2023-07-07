@@ -2,8 +2,25 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Bg from "../assets/Card.png";
 import Img1 from "../assets/Img1.png";
+// import {initializeApp} from "firebase";
+// import { getDatabase, ref as databaseRef, set, get, child } from "firebase/database";
+// import firebaseConfig from "../../src/firebase";
 
+// const app = initializeApp(firebaseConfig);
 const Card = ({ Name, Desc }) => {
+  // const dbRef = databaseRef(getDatabase(app));
+  // get(child(dbRef, 'users/')).then((snapshot) => {
+  //   if (snapshot.exists()) {
+  //       Object.keys(snapshot.val()).forEach((key) => {
+  //           console.log(`Name: ${snapshot.val()[key].name}`);
+  //           console.log(`Desc: ${snapshot.val()[key].desc}`);
+  //       });
+  //   } else {
+  //       console.log("No data available");
+  //   }
+  //   }).catch((error) => {
+  //       console.error(error);
+// });
   return (
     <>
       <div className="z-0 relative pb-8">

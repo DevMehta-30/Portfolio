@@ -1,20 +1,20 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getStorage} from "firebase/storage";
-import { getDatabase } from "firebase/database"
+import { getStorage } from "firebase/storage";
+import { getDatabase } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCGybtLf3O7_uelpHgMCE9z2VC8yLS2nAc",
-  authDomain: "projects-cbb90.firebaseapp.com",
-  projectId: "projects-cbb90",
-  storageBucket: "projects-cbb90.appspot.com",
-  messagingSenderId: "591457702234",
-  appId: "1:591457702234:web:8b381f9b65acf59f75a363"
+  apiKey: "AIzaSyDoUZWOgutFejDpOj4BvovBlbwbydF7alw",
+  authDomain: "portfolio-cde63.firebaseapp.com",
+  projectId: "portfolio-cde63",
+  storageBucket: "portfolio-cde63.appspot.com",
+  messagingSenderId: "144470003389",
+  appId: "1:144470003389:web:7290a2d9f7b3dc7b2bf1d4",
+  databaseURL: "https://portfolio-cde63-default-rtdb.firebaseio.com/",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app);

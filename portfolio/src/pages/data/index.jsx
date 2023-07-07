@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { storage } from "../../firebase";
-import { ref, uploadBytes } from "firebase/storage";
+import { ref as storageRef, uploadBytes } from "firebase/storage";
 import { database } from "../../firebase";
-import { push, child, update } from "firebase/database";
+import { push, child, update, ref as databaseRef } from "firebase/database";
 function Index() {
   const [name, setName] = useState(null);
   const [desc, setDesc] = useState(null);
@@ -14,10 +14,10 @@ function Index() {
       name: name,
       desc: desc,
     };
-    const newPostKey = push(child(ref(database), "posts")).key;
+    const newPostKey = push(child(databaseRef(database, "posts"), "/")).key;
     const updates = {};
     updates["/" + newPostKey] = obj;
-    return update(ref(database), updates);
+    return update(databaseRef(database), updates);
   };
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -30,7 +30,7 @@ function Index() {
   };
   const uploadImage = () => {
     if (image == null) return;
-    const imageRef = ref(storage, `${image.name}`);
+    const imageRef = storageRef(storage, `${name}`);
     uploadBytes(imageRef, image).then(() => {
       alert("Submitted");
     });
