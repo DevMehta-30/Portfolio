@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Landing from "../../components/landing";
 import MyProjects from "../../components/MyProjects";
 import Sections from "../../components/Sections";
+import Footer from "../../components/Footer";
 function index() {
   return (
     <>
@@ -10,6 +11,7 @@ function index() {
       <Landing />
       <MyProjects />
       <Sections />
+      <Footer />
     </>
   );
 }

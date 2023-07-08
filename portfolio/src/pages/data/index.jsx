@@ -37,45 +37,54 @@ function Index() {
   };
   return (
     <>
-      {/* <form action=""> */}
-      <label htmlFor="">
-        Enter the Project Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => handleInputChange(e)}
-          id="name"
-          placeholder="Name"
-        />
-      </label>
-      <label htmlFor="">
-        Enter the description for the Project:
-        <input
-          type="text"
-          value={desc}
-          onChange={(e) => handleInputChange(e)}
-          id="desc"
-          placeholder="Description"
-        />
-      </label>
-      <div htmlFor="">
-        Give the the cover image
-        <input
-          type="file"
-          onChange={(event) => {
-            setImage(event.target.files[0]);
-          }}
-        />
+      <div className="flex justify-center pt-36">
+        <div className="bg-gradient-to-b from-yellow-300 to-transparent h-96 border-2 border-black rounded-lg flex flex-col">
+          <label htmlFor="" className="px-8 flex flex-col font-bold py-4">
+            Enter the Project Name:
+            <div className="py-4 ">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => handleInputChange(e)}
+                className="opacity-40 border-2 border-black w-full"
+              />
+            </div>
+          </label>
+          <label htmlFor="" className="px-8 flex flex-col font-bold py-4">
+            Enter the description for the Project:
+            <div className="py-4 ">
+              <input
+                type="text"
+                value={desc}
+                onChange={(e) => handleInputChange(e)}
+                className="opacity-40 border-2 border-black w-full"
+              />
+            </div>
+          </label>
+          <div htmlFor="" className="px-8 flex flex-col font-bold py-4">
+            Give the the cover image
+            <div className="font-medium pb-4">
+              <input
+                type="file"
+                onChange={(event) => {
+                  setImage(event.target.files[0]);
+                }}
+              />
+            </div>
+          </div>
+          <div className="px-8">
+            <button
+              onClick={() => {
+                uploadImage();
+                handleSubmit();
+              }}
+              className="border-yellow-600 border-2 w-36 rounded-lg font-bold"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
-      <button
-        onClick={() => {
-          uploadImage();
-          handleSubmit();
-        }}
-      >
-        Submit
-      </button>
-      {/* </form> */}
     </>
   );
 }
