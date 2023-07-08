@@ -10,7 +10,6 @@ function index() {
       <Landing />
       <MyProjects />
       <Sections />
-      {/* <Footer /> */}
     </>
   );
 }
