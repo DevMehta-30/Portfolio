@@ -4,7 +4,7 @@ import Background from "../assets/Background1.png";
 function landing() {
   return (
     <>
-      <div className="z-0">
+      <div className="z-0 relative hidden md:flex">
         <img src={Background} alt="Bckground" />
         <div className="absolute top-44 pl-20 w-full">
           <div className="relative flex w-full">

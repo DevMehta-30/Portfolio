@@ -16,7 +16,7 @@ export default function SectionCard2() {
   return (
     <>
       <div
-        className="relative px-8 pt-8 w-[24rem] h-[24rem] rounded-[24px] border overflow-hidden"
+        className="relative px-8 pt-8 w-auto lg:h-[24rem] h-[24rem] sm:h-[20rem] rounded-[24px] border overflow-hidden"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

@@ -16,7 +16,7 @@ export default function SectionCard() {
   return (
     <>
       <div
-        className="relative px-8 pt-8 w-[24rem] h-[24rem] rounded-[24px] border overflow-hidden"
+        className="relative px-8 pt-8 w-auto h-[24rem] lg:h-[24rem] md:h-[20rem] rounded-[24px] border overflow-hidden"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -25,7 +25,7 @@ export default function SectionCard() {
             <img
               src={Section1}
               alt="Blue Section"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover "
             />
             <div className="absolute">
               <VerticalText text="EXPERIENCES" />

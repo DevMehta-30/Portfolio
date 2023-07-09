@@ -7,10 +7,10 @@ function Sections() {
   return (
     <>
       <div className="z-0 relative pb-8">
-        <div className="flex flex-col-3 gap-20 px-24 pb-16">
-          <div><SectionCard/></div>
-          <div><SectionCard2/></div>
-          <div><SectionCard3/></div>
+        <div className="flex flex-col md:flex-row gap-auto px-24">
+          <div className="flex-1 p-2"><SectionCard/></div>
+          <div className="flex-1 p-2"><SectionCard2/></div>
+          <div className="flex-1 p-2"><SectionCard3/></div>
         </div>
       </div>
     </>
