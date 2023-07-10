@@ -14,8 +14,10 @@ function Navbar() {
         </div>
         <div className="hidden md:flex">
           <ul className="flex items-center gap-8">
-            <li>AboutMe</li>
-            <li>My Projects</li>
+            <li>
+              AboutMe</li>
+            <li>
+              <a href={'/projects'}>My Projects</a></li>
             <li>Certifications</li>
             <li>Work Experiences</li>
           </ul>
