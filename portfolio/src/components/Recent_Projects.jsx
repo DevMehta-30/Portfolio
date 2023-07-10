@@ -160,7 +160,7 @@ const Project_Card = () => {
       <div className="relative w-full">
         {projects.length > 0 ? (
           <div className="hidden md:block">
-            {projects.map((project, index) => (
+            {projects.slice(-3).map((project, index) => (
               <Card key={index} {...project} />
             ))}
           </div>
@@ -169,7 +169,7 @@ const Project_Card = () => {
         )}
         {projects.length > 1 && (
           <div className="md:hidden">
-            {projects.map((project, index) => (
+            {projects.slice(-3).map((project, index) => (
               <Card key={index} {...project} />
             ))}
           </div>

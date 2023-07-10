@@ -1,7 +1,7 @@
 import './App.css';
 import Home from "./pages/home/index"
 import Data from "./pages/data/index"
-import DD from "./components/DropDown"
+import MyProjects from "./pages/MyProjects/index";
 
 import {
   BrowserRouter as Router,
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/data' element={<Data />}></Route>
-          <Route path='/prac' element={<DD />}></Route>
+          <Route path='/projects' element={<MyProjects />}></Route>
         </Routes>
       </Router>
     </div>

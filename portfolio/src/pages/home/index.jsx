@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Landing from "../../components/landing";
-import MyProjects from "../../components/MyProjects";
+import MyProjects from "../../components/MyRecProjects";
 import Sections from "../../components/Sections";
 import Footer from "../../components/Footer";
 
