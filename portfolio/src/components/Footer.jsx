@@ -34,7 +34,7 @@ import Instagram from "../assets/Instagram.png";
 export default function Footer() {
   return (
     <>
-      <div className="w-full z-0 h-60 bg-gradient-to-l from-yellow-100 hidden md:flex flex-col justify-center items-center">
+      <div className="w-full z-0 h-60 bg-gradient-to-l from-yellow-100 flex-col justify-center items-center">
         <div className="flex justify-center items-center py-8">
           <div className="bg-[#FFDDBF] w-48 h-16 text-xl flex justify-center items-center rounded-lg font-semibold font-poppins">
             Follow me on 👇
