@@ -96,6 +96,7 @@
 import React, { useEffect, useState } from "react";
 import Img1 from "../assets/Img1.png";
 import Draggable from "react-draggable";
+import { useSwipeable } from "react-swipeable";
 
 const Card = ({ Name, Desc }) => {
   return (
@@ -154,9 +155,18 @@ const Project_Card = () => {
     setCurrentCard((prevCard) => (prevCard + 1) % projects.length);
   };
 
+  const handleSwipeLeft = () => {
+    setCurrentCard((prevCard) => (prevCard - 1 + projects.length) % projects.length);
+  };
+
   useEffect(() => {
     getProjects();
   }, []);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedRight: handleSwipeRight,
+    onSwipedLeft: handleSwipeLeft,
+  });
 
   return (
     <>
@@ -171,8 +181,10 @@ const Project_Card = () => {
           <h1>Loading</h1>
         )}
         {projects.length > 1 && (
-          <div className="md:hidden">
-            <Card {...projects[currentCard]} />
+          <div className="md:hidden" {...swipeHandlers}>
+            {projects.map((project, index) => (
+              <Card key={index} {...project} />
+            ))}
           </div>
         )}
       </div>
