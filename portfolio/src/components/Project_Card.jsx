@@ -95,14 +95,11 @@
 
 import React, { useEffect, useState } from "react";
 import Img1 from "../assets/Img1.png";
-import Draggable from "react-draggable";
-import { useSwipeable } from "react-swipeable";
 
 const Card = ({ Name, Desc }) => {
   return (
     <>
       <div className="z-0 relative mb-8 w-full bg-[#FFF8F2] rounded-[48px] overflow-hidden">
-        <Draggable axis="x" bounds="parent">
           <div className="relative p-4 md:p-0">
             <div className="md:flex items-center">
               <img
@@ -121,7 +118,6 @@ const Card = ({ Name, Desc }) => {
               </div>
             </div>
           </div>
-        </Draggable>
       </div>
     </>
   );
@@ -129,7 +125,6 @@ const Card = ({ Name, Desc }) => {
 
 const Project_Card = () => {
   const [projects, setProjects] = useState([]);
-  const [currentCard, setCurrentCard] = useState(0);
 
   const getProjects = () => {
     setTimeout(() => {
@@ -151,22 +146,10 @@ const Project_Card = () => {
     }, 3000);
   };
 
-  const handleSwipeRight = () => {
-    setCurrentCard((prevCard) => (prevCard + 1) % projects.length);
-  };
-
-  const handleSwipeLeft = () => {
-    setCurrentCard((prevCard) => (prevCard - 1 + projects.length) % projects.length);
-  };
 
   useEffect(() => {
     getProjects();
   }, []);
-
-  const swipeHandlers = useSwipeable({
-    onSwipedRight: handleSwipeRight,
-    onSwipedLeft: handleSwipeLeft,
-  });
 
   return (
     <>
@@ -181,7 +164,7 @@ const Project_Card = () => {
           <h1>Loading</h1>
         )}
         {projects.length > 1 && (
-          <div className="md:hidden" {...swipeHandlers}>
+          <div className="md:hidden">
             {projects.map((project, index) => (
               <Card key={index} {...project} />
             ))}
