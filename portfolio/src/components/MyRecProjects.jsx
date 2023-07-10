@@ -25,10 +25,10 @@
 // export default MyProjects;
 
 import React from "react";
-import Card from "./Project_Card";
+import Card from "./Recent_Projects";
 import { Link } from "react-router-dom";
 
-function MyProjects() {
+function MyRecProjects() {
   return (
     <div className="bg-gradient-to-b from-orange-100">
       <div className="container mx-auto py-16 px-8 md:px-16">
@@ -50,4 +50,4 @@ function MyProjects() {
   );
 }
 
-export default MyProjects;
+export default MyRecProjects;
