@@ -13,10 +13,10 @@ function Index() {
         <div>
           <Landing />
         </div>
-        <div className="pt-12 md:pt-0">
+        <div className="pt-8 md:pt-0">
           <MyProjects />
         </div>
-        <div className="pt-24 md:pt-0">
+        <div>
           <Sections />
         </div>
       </div>

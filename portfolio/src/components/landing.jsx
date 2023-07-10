@@ -91,7 +91,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="block md:hidden text-center justify-center bg-gradient-to-b from-yellow-100">
+      <div className="block md:hidden text-center justify-center bg-gradient-to-b from-yellow-100 px-4">
         <img src={Dev} alt="Background" className="mx-auto mb-4" />
         <div className="flex flex-col items-center">
           <div className="flex items-center font-medium justify-around bg-[#FFDDBF] h-12 w-36 rounded-lg text-xl mb-4">
